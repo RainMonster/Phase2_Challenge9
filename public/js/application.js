@@ -5,6 +5,7 @@ $(document).ready(function() {
   });
 
   $('button.skill_teller').on('click', function() {
+    console.log("I'm here");
     var getUrlSkill = window.location.pathname;
     var getSkill = getUrlSkill.match(/\w+$/);
 
@@ -12,9 +13,8 @@ $(document).ready(function() {
   });
 
   $('button.meal_teller').on('click', function() {
-    // Your code uses a global javascript object 
-    // provided by the server without requiring
-    // an ajax request.
+    var chooseMeal = Math.floor(Math.random()*8);
+    $('#meal_holder').text(meals[chooseMeal]);
   });
 
 });
